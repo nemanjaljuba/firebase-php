@@ -52,7 +52,7 @@ final class RegistrationTokens implements Countable, IteratorAggregate
                 if ($value instanceof RegistrationToken) {
                     $tokens[] = $value;
                 } elseif ($value !== '') {
-                    $tokens[] = RegistrationToken::fromValue($value);
+                    $tokens[] = RegistrationToken::fromValue($value ?? '');
                 }
             }
         }
